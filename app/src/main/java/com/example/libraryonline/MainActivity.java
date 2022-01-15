@@ -12,16 +12,20 @@ public class MainActivity extends Activity implements OnClickListener {
 
     Button btn;
     Button btn1;
+    Button btn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn = (Button)findViewById(R.id.button);
+        btn = (Button)findViewById(R.id.user);
         btn.setOnClickListener(this);
-        btn1 = (Button)findViewById(R.id.button4);
+        btn2 = (Button)findViewById(R.id.registerpage);
+        btn2.setOnClickListener(this);
+        btn1 = (Button)findViewById(R.id.admin);
         btn1.setOnClickListener(this);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -37,6 +41,11 @@ public class MainActivity extends Activity implements OnClickListener {
             startActivity(i);
         }
         if(v.equals(btn1)){
+            Intent i = new Intent(this, Admin_login.class);
+            startActivity(i);
+        }
+
+        if(v.equals(btn2)){
             Intent i = new Intent(this, RegisterActivity.class);
             startActivity(i);
         }
