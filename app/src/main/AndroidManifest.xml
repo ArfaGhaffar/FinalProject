@@ -13,7 +13,7 @@
             android:name=".Admin_login"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Login_activity"></activity>
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".Admin_profile_activity"></activity>
+
     </application>
 
 </manifest>

@@ -1,4 +1,6 @@
 package com.example.libraryonline;
 
-public class Admin_profile_activity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Admin_profile_activity extends AppCompatActivity {
 }
