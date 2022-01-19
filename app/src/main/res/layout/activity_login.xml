@@ -50,6 +50,7 @@
         android:shadowDy="0"
         android:shadowRadius="14"
         android:text="Submit"
+        android:onClick="login"
         android:textColor="#FFFFFF"
         android:textSize="25sp" />
 

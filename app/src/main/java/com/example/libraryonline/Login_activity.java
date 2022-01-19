@@ -54,6 +54,8 @@ public class Login_activity extends Activity {
                 editor.putString("name", username);
             }
             editor.commit();
+            Intent i = new Intent(this, Student_Profile_Activity.class);
+            startActivity(i);
            
             Toast.makeText(Login_activity.this, "Welcome "+username, Toast.LENGTH_LONG).show();
 
