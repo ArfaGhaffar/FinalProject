@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img1"
+    android:background="@drawable/lib3"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".Admin_login">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="322dp"
+        android:layout_height="58dp"
+        android:background="@color/black"
         android:gravity="center"
-        android:text="Login Admin"
 
-        android:textColor="#F9AC36"
+        android:text="Login Admin"
+        android:textColor="#CC3D19"
         android:textSize="28sp" />
 
     <EditText
@@ -26,7 +26,7 @@
         android:background="@drawable/edittextdesign"
         android:hint="Username"
         android:paddingLeft="15sp"
-        android:textColor="@color/white"
+        android:textColor="@android:color/holo_orange_light"
         android:textColorHint="#9C9C9C" />
 
     <EditText
@@ -37,7 +37,7 @@
         android:background="@drawable/edittextdesign"
         android:hint="Password"
         android:paddingLeft="15sp"
-        android:textColor="@color/white"
+        android:textColor="@android:color/holo_orange_light"
         android:textColorHint="#9C9C9C" />
 
     <Button
@@ -45,16 +45,14 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_margin="20dp"
-        android:background="@drawable/buttondesign"
+        android:background="@color/black"
         android:shadowColor="#FAFAFA"
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="14"
         android:text="Submit"
-        android:onClick="login"
-        android:textColor="#FFFFFF"
+        android:textColor="#DC3806"
         android:textSize="25sp" />
-
 
 
 </LinearLayout>
