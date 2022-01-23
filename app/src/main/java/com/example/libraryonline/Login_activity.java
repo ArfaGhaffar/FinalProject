@@ -22,6 +22,12 @@ public class Login_activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Start page");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(true);
+        
         sharedpreferences = getSharedPreferences(mypreference,
                 Context.MODE_PRIVATE);
         registerUser = new DatabaseHelper(this);
@@ -68,7 +74,11 @@ public class Login_activity extends Activity {
     }
 
 
-
+  @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 
 
 }
