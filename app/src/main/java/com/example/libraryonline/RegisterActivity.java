@@ -15,6 +15,11 @@ public class RegisterActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Start page");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(true);
 
     }
 
@@ -59,5 +64,10 @@ public class RegisterActivity extends Activity {
                 }
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 
 }
