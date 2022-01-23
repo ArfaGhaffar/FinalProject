@@ -27,6 +27,11 @@ public class Student_Profile_Activity extends Activity {
 
         sharedpreferences = getSharedPreferences(mypreference,
                 Context.MODE_PRIVATE);
+        
+         ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Start page");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(true);
 
         if(sharedpreferences.getString("userType",null).equalsIgnoreCase("student"))
         Toast.makeText(getApplicationContext(),sharedpreferences.getString("userType",null),Toast.LENGTH_LONG).show();
@@ -75,6 +80,12 @@ public class Student_Profile_Activity extends Activity {
         }
         Intent i = new Intent(this,Login_activity.class);
         startActivity(i);
+    }
+    
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
 }
