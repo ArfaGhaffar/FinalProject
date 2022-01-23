@@ -14,7 +14,12 @@ public class Admin_profile_activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_profile_activity);
-
+        
+         ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Admin Login");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(true);
+        
         DatabaseHelper myDb = new DatabaseHelper(Admin_profile_activity.this);
 
         List<String> c1 = new ArrayList<>();
@@ -51,5 +56,10 @@ public class Admin_profile_activity extends Activity {
 
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 
 }
