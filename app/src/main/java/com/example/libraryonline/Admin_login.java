@@ -19,6 +19,11 @@ public class Admin_login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_login);
+        
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Start page");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(true);
     }
 
 
@@ -51,6 +56,10 @@ public class Admin_login extends AppCompatActivity {
     }
 
   
-
+ @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 
 }
