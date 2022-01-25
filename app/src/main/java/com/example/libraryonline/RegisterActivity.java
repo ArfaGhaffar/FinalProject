@@ -63,6 +63,25 @@ public class RegisterActivity extends Activity {
                     }
                 }
     }
+    
+    
+     @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        outState.putString("text", userName.getText().toString());
+        outState.putString("text2", password.getText().toString());
+        outState.putString("text3", registerNumber.getText().toString());
+        outState.putString("text4", department.getText().toString());
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        userName.setText(savedInstanceState.getString("text"));
+        password.setText(savedInstanceState.getString("text2"));
+        userName.setText(savedInstanceState.getString("text3"));
+        password.setText(savedInstanceState.getString("text4"));
+        super.onRestoreInstanceState(savedInstanceState);
+    }
 
     @Override
     public boolean onSupportNavigateUp() {
