@@ -54,6 +54,20 @@ public class Admin_login extends AppCompatActivity {
             Toast.makeText(Admin_login.this, "Sorry, you entered wrong credentials", Toast.LENGTH_LONG).show();
         }
     }
+    
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        outState.putString("text", userName.getText().toString());
+        outState.putString("text2", password.getText().toString());
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        userName.setText(savedInstanceState.getString("text"));
+        password.setText(savedInstanceState.getString("text2"));
+        super.onRestoreInstanceState(savedInstanceState);
+    }
 
   
  @Override
